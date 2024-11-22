@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadatak1 - html</title>
+</head>
+<body>
+  <h1>Naslov</h1>
+  <h2>Podnaslov</h2>
+  <p>Paragraf 1</p>
+  <p>Paragraf 2</p>
+  <img src="images/image1.jpg" alt="image" title="image">
+  <img src="https://www.w3schools.com/images/img_girl.jpg" alt="image" title="image">.
+</body>
+</html>
