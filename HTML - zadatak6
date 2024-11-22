@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadata6 html</title>
+</head>
+
+<body>
+    <ul>
+        <li>Samsung</li>
+        <li>Apple</li>
+        <li>Huawei</li>
+        <li>Panasonic</li>
+        <li>Motorola</li>
+    </ul>
+    <ol type="A">
+        <li>Samsung</li>
+        <li>Apple</li>
+        <li>Huawei</li>
+        <li>Panasonic</li>
+        <li>Motorola</li>
+    </ol>
+    <ul>
+        <li>Samsung
+            <ul type="circle">
+                <li>Galaxy A3</li>
+                <li>Galaxy A3</li>
+                <li>Galaxy A3</li>
+            </ul>
+
+        </li>
+        <li>Apple
+            <ul type="circle">
+                <li>Iphone 8</li>
+                <li>Iphone 8</li>
+                <li>Iphone 8</li>
+            </ul>
+        </li>
+    </ul>
+    </table>
+</body>
+
+</html>
