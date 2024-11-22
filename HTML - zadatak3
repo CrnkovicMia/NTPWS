@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadatak3 - html</title>
+</head>
+
+<body>
+  <h1>Naslov</h1>
+  <h2>Podnaslov</h2>
+  <p>Paragraf 1</p>
+  <p>Paragraf 2</p>
+  <figure>
+    <img src="images/image1.jpg" alt="image" title="image">
+    <figcaption>A cheeky macaque, Lower Kintaganban
+      River, Borneo. Original by
+      <a href="http://www.flickr.com/photos/rclark/">Richard
+        Clark</a>
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="https://www.w3schools.com/images/img_girl.jpg" alt="image" title="image">.
+    <figcaption>A cheeky macaque, Lower Kintaganban
+      River, Borneo. Original by
+      <a href="http://www.flickr.com/photos/rclark/">Richard
+        Clark</a>
+    </figcaption>
+  </figure>
+</body>
+
+</html>
