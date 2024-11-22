@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadata5 html</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th style="font-weight: bold;" colspan="2">Apple</th>
+            <th style="font-weight: bold;" colspan="2">Smasung</th>
+        </tr>
+        <tr>
+            <td style="padding: 10;"><img src="images/mobitel.png" alt="slika" width="30"></td>
+            <td>Galaxy S8</td>
+            <td><img src="images/mobitel.png" alt="slika" width="30"></td>
+            <td>Iphone 9</td>
+        </tr>
+        <tr>
+            <td style="padding: 10;"><img src="images/mobitel.png" alt="slika" width="30"></td>
+            <td>Galaxy S9</td>
+            <td><img src="images/mobitel.png" alt="slika" width="30"></td>
+            <td>Iphone X</td>
+        </tr>
+    </table>
+</body>
+
+</html>
