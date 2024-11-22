@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadata4 html</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th style="font-weight: bold;">Samsung</th>
+            <th style="font-weight: bold;">Apple</th>
+            <th style="font-weight: bold;">Huawei</th>
+            <th style="font-weight: bold;">Panasonic</th>
+        </tr>
+        <tr>
+            <td style="padding: 5px;">Galaxy A3</td>
+            <td>Iphone 6</td>
+            <td>Holly 4 plus</td>
+            <td>Elluga Ray 500</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px;">Galaxy S4</td>
+            <td>Iphone 7</td>
+            <td>Mate 10 Lite</td>
+            <td>Elluga Ray 700</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px;">Galaxy S5</td>
+            <td>Iphone 8</td>
+            <td>Mare 10 PRO</td>
+            <td>Elluga 14</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px;">Galaxy S6</td>
+            <td>Iphone 8 plus</td>
+            <td>Enjoy 7S</td>
+            <td>P99</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px;">Galaxy S9</td>
+            <td>Iphone X</td>
+            <td>Nova 2s</td>
+            <td>Elluga a4</td>
+        </tr>
+    </table>
+</body>
+
+</html>
