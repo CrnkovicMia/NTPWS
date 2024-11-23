@@ -9,11 +9,11 @@
 
 <body>
 <form action="" method="post">
-      <label for="vozila">Označi vozilo</label>
-      <input type="radio" name="vozila" value="Audi">Audi
-      <input type="radio" name="vozila" value="BMW">BMW
-      <input type="radio" name="vozila" value="Renault">Renault
-      <input type="radio" name="vozila" value="Citroen">Citroen
+      <label for="vozila">Označi vozilo</label> <br>
+      <input type="radio" name="vozila" value="Audi">Audi <br>
+      <input type="radio" name="vozila" value="BMW">BMW<br>
+      <input type="radio" name="vozila" value="Renault">Renault<br>
+      <input type="radio" name="vozila" value="Citroen">Citroen<br>
       <input type="submit" value="Pošalji">
     </form>
     <?php 
