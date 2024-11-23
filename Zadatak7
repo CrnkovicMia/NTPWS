@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak7</title>
+</head>
+
+<body>
+  <form action="" method="POST">
+    <label for="jedan">Prvi kolokvij</label>
+    <input type="number" name="jedan" id="jedan" min="1" max="5"> <br>
+    <label for="dva">Drugi kolokvij</label>
+    <input type="number" name="dva" id="dva"  min="1" max="5"><br>
+    <input type="submit" value="Izracunaj">
+  </form>
+  <?php
+   $PrviKolokvij = $_POST['jedan'];
+   $DrugiKolokvij = $_POST['dva'];
+   $prosijek="";
+   $ocjena="";
+
+    if (isset($_POST["jedan"]) && isset($_POST["dva"])) {
+
+        if($PrviKolokvij < 2 || $DrugiKolokvij <2){
+            $ocjena = 1;
+            echo "<p>Jedan ili oba kolokvija su negativna i time je i ocjena negativan</p>";
+        }else{
+            $prosijek = ($PrviKolokvij + $DrugiKolokvij )/2;
+            $ocjena = round($prosijek);
+            echo "<p>Prosjek je $prosijek, ocjena je : $ocjena </p>";
+        }
+
+    }
+  
+  
+  ?>
+</body>
+
+</html>
