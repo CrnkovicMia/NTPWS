@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak10</title>
+</head>
+<body>
+<form action="" method="post">
+    <label for="unos">Unesi rijec: </label> <br>
+    <input type="text" name="unos" id="unos"> <br>
+    <input type="submit" value="Izracunja">
+</form>
+
+<?php
+$unos = $_POST['unos'];
+if(isset($_POST['unos'])){
+    $brojRijeci = str_word_count($unos);
+    echo "$unos ima $brojRijeci rijeci";
+}
+?>
+</body>
+</html>
