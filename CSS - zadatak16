@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadata16 html</title>
+    <style>
+        h1{
+            width: 38%;
+        }
+       img{
+        margin-right: 1%;
+        float: left;
+       }
+       p{
+        width: 20%;
+        margin-bottom: 10px;
+       }
+    </style>
+</head>
+
+<body>
+<h1>Seammaster Chronographic Mens Watch</h1>
+<div>
+    <img src="images/mobitel.png" alt="Slika" width="10%" height="150px">
+    <p>Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.Ovo je tekst za paragraaf.</p>
+</div>
+<iframe width="38%" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</body>
+
+</html>
