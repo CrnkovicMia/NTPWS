@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak9</title>
+</head>
+<body>
+<?php
+$danTjedna = date("w");
+$sat = date("H");
+
+if($danTjedna == 0){
+    echo "Nedjelja je, ducan ne radi";
+}
+else if($danTjedna == 6 && $sat >= 9 && $sat <= 14){
+    echo "Otvoreno";
+
+}
+else if($sat >=8 && $sat <= 20){
+    echo "Otvoreno";
+   
+}else{
+    echo "Zatvoreno";
+}
+ ?>
+</body>
+</html>
