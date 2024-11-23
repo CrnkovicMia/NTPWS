@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadata4</title>
+</head>
+
+<body>
+
+    <form action="" method="post"> 
+        <label for="a">Vrijednost a</label>
+        <input type="number" name="a" id="a" required><br> 
+        <label for="b">Vrijednost b</label>
+        <input type="number" name="b" id="b" required><br> 
+        <input type="submit" value="Posalji">
+    </form>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $a = isset($_POST['a']) ? $_POST['a'] : 0;
+        $b = isset($_POST['b']) ? $_POST['b'] : 0;
+
+        function formula($a, $b)
+        {
+            $c = (3 * $a - $b) / 2;
+            echo "Rezultat je: " . $c;
+        }
+
+        formula($a, $b);
+    }
+    ?>
+</body>
+
+</html>
