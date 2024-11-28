@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak17 - Paginacija</title>
+    <style>
+        body {
+            margin: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .user {
+            margin: 5px 0;
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            color: #007bff;
+        }
+
+        .pagination a.active {
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Users with Pagination</h1>
+    <?php
+    // Povezivanje na bazu
+    $MySQL = mysqli_connect("localhost", "root", "root", "vjezbebaza") or die('Error connecting to MySQL server.');
+
+    // Trenutna stranica
+    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+    $limit = 15; // Broj korisnika po stranici
+    $offset = ($page - 1) * $limit;
+
+    // Ukupan broj korisnika
+    $total_query = "SELECT COUNT(*) AS total FROM users";
+    $total_result = mysqli_query($MySQL, $total_query);
+    $total_row = mysqli_fetch_assoc($total_result);
+    $total_users = $total_row['total'];
+
+    // Ukupan broj stranica
+    $total_pages = ceil($total_users / $limit);
+
+    // Dohvaćanje korisnika s ograničenjem
+    $query = "SELECT * FROM users 
+              LEFT JOIN countries ON countries.country_code = users.country_code 
+              LIMIT $offset, $limit";
+    $result = mysqli_query($MySQL, $query);
+
+    // Ispis korisnika
+    print '<h2>Users (Countries)</h2><hr style="border-bottom:1px solid grey">';
+    while ($row = mysqli_fetch_assoc($result)) {
+        print "<p class='user'><i class='bi bi-person'></i> " 
+              . htmlspecialchars($row['user_firstname']) . " <span style='color:green'>" 
+              . htmlspecialchars($row['user_lastname']) . "</span> " 
+              . (!empty($row['country_name']) ? "(" . htmlspecialchars($row['country_name']) . ")" : "") 
+              . "</p>";
+    }
+
+    // Paginacija
+    print '<div class="pagination">';
+    if ($page > 1) {
+        print '<a href="?page=' . ($page - 1) . '">&laquo; Previous</a>';
+    }
+
+    for ($i = 1; $i <= $total_pages; $i++) {
+        print '<a href="?page=' . $i . '" class="' . ($i == $page ? 'active' : '') . '">' . $i . '</a>';
+    }
+
+    if ($page < $total_pages) {
+        print '<a href="?page=' . ($page + 1) . '">Next &raquo;</a>';
+    }
+    print '</div>';
+
+    // Zatvaranje konekcije
+    mysqli_close($MySQL);
+    ?>
+</div>
+</body>
+</html>
