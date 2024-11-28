@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak15</title>
+</head>
+<body>
+<?php
+$con = mysqli_connect("localhost", "root", "root", "bazaVjezbe");
+
+if (!$con) {
+    die("Greška prilikom spajanja na bazu: " . mysqli_connect_error());
+}
+
+// Provjera je li forma podnijeta
+if (isset($_POST['search'])) {
+    $input = mysqli_real_escape_string($con, $_POST['query']); // Sigurnosna provjera unosa
+    
+    $query = "SELECT * FROM users WHERE firstname LIKE '%$input%' OR lastname LIKE '%$input%'";
+    $result = mysqli_query($con, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo "<h3>Rezultati pretrage:</h3>";
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<p>" . htmlspecialchars($row['firstname']) . " " . htmlspecialchars($row['lastname']) . "</p>";
+        }
+    } else {
+        echo "<p>Nema rezultata za uneseni upit.</p>";
+    }
+}
+
+mysqli_close($con);
+?>
+
+    <h1>Pretraživač korisnika</h1>
+    <form method="POST" action="">
+        <label for="query">Unesite ime ili prezime:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit" name="search">Pretraži</button>
+    </form>
+</body>
+</html>
