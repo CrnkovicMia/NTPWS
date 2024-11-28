@@ -1,0 +1,18 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['news_views'])) {
+    $_SESSION['news_views'] = [];
+}
+
+// Funkcija za spremanje posjećenog članka
+function logNewsView($newsId) {
+    $_SESSION['news_views'][] = $newsId;
+}
+
+// Provjerite akciju i spremite posjećenost
+if (isset($_GET['action'])) {
+    $action = (int)$_GET['action'];
+    logNewsView($action);
+}
+?>
